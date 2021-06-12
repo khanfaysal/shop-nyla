@@ -103,7 +103,7 @@ const SignIn = ({loggedInUser, setLoggedInUser, error, setError, loading, setLoa
 
             <div className='remember-forgot'>
                 <div>
-                    <input type="checkbox" className="" name="" id="remember"/>
+                    <input type="checkbox" id="remember"/>
                     <label htmlFor="remember">Remember Me</label>
                 </div>
                 { !newUser && <span className="switch-link">Forgot Password</span>}

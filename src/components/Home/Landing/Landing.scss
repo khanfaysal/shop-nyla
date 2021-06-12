@@ -24,3 +24,15 @@
     margin: 1rem 0 2rem 0;
   }
 }
+
+@media only screen and (max-width: 414px) {
+  .landing {
+    background-image: url("https://live.staticflickr.com/65535/51213815095_33cd87f3f4_o.jpg");
+    height: 80vh;
+    margin-bottom: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 7rem 2rem;
+    justify-content: flex-end;
+  }
+} ;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.scss";
 import {
-  faFacebook,
+  faFacebookF,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -37,7 +37,7 @@ const Footer = () => {
           <div className='footer-socials-icon'>
             <FontAwesomeIcon
               className='footer-facebook-icon'
-              icon={faFacebook}
+              icon={faFacebookF}
             />
             <FontAwesomeIcon
               className='footer-instagram-icon'
@@ -47,7 +47,10 @@ const Footer = () => {
         </div>
       </div>
       <div className='copyright'>
-        <p>Copyright ©2021 All rights reserved</p>
+        <p>
+          Copyright ©{new Date().getFullYear()} All rights
+          reserved.
+        </p>
       </div>
     </div>
   );

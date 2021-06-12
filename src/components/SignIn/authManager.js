@@ -18,11 +18,11 @@ const setUserName = name => {
     })
 };
 
-export const setUser = user => {
+export const setUser = (user, name) => {
     const {email, displayName, photoURL, emailVerified} = user;
     const newUser = {
         email,
-        name: displayName,
+        name: displayName || name,
         photo: photoURL,
         emailVerified
     };
@@ -33,7 +33,7 @@ export const createUser = (email, password, name) => {
     return auth.createUserWithEmailAndPassword(email, password)
     .then(res => {
         setUserName(name);
-        return setUser(res.user);
+        return setUser(res.user, name);
     })
     .catch(err => err);
 };

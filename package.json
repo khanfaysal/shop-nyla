@@ -4,12 +4,16 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "aos": "^2.3.4",
     "emailjs-com": "^2.6.4",
+    "file-uri-to-path": "^1.0.0",
     "firebase": "^8.6.3",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
@@ -21,6 +25,7 @@
     "react-spinners": "^0.11.0",
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
+    "sweetalert": "^2.1.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

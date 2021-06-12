@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react";
-import "./Shop.scss";
+import { connect } from "react-redux";
+import { fetchProducts } from "../../redux/actions/productsActions";
+import Footer from "../SharedComponents/Footer/Footer";
 import ProductCard from "../SharedComponents/ProducrtCard/ProductCard";
-import allProducts from "../../fakeData";
-import men from "../../fakeData/adidasMenCloth";
-import women from "../../fakeData/adidasWomenCloth";
-import shoe from "../../fakeData/adidasShoe";
+import ProductSkeleton from "../Skeletons/ProductSkeleton";
+import "./Shop.scss";
 
-const Shop = () => {
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const Shop = ({ products, setProducts, alreadyLoaded }) => {
   const [category, setCategory] = useState("allProducts");
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  useEffect(() => !alreadyLoaded&&setProducts(), [setProducts, alreadyLoaded]);
 
   let data;
 
   if (category === "allProducts") {
-    data = allProducts;
+    data = products;
   } else if (category === "women") {
-    data = women;
+    data = products.filter(pd => pd.category==="Women Cloth");
   } else if (category === "men") {
-    data = men;
+    data = products.filter(pd => pd.category==="men_cloth");
   } else if (category === "shoe") {
-    data = shoe;
+    data = products.filter(pd => pd.category==="shoe");
   }
   const handleCategory = (event) => {
     setCategory(event.target.name);
@@ -77,12 +77,31 @@ const Shop = () => {
         </button>
       </div>
       <div className='products-container'>
-        {data.map((data) => (
+        {
+          data.length>0?
+          data.map((data) => (
           <ProductCard key={data.key} data={data} />
-        ))}
+          ))
+          :arr.map((_) => <ProductSkeleton key={_} />)
+        }
       </div>
+      <Footer />
     </section>
   );
 };
 
-export default Shop;
+const mapStateToProps = state => {
+  const { products, alreadyLoaded } = state.productsReducer;
+  return {
+    products,
+    alreadyLoaded
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setProducts: () => dispatch(fetchProducts()) 
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Shop);

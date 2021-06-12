@@ -101,3 +101,10 @@
     animation: slide-in-bottom 200ms ease-in-out 350ms both;
   }
 }
+
+@media only screen and (max-width: 414px) {
+  .hot-products-container {
+    height: 100%;
+    margin-bottom: 50px;
+  }
+}

@@ -2,6 +2,11 @@
 
 .product-overview {
   margin-bottom: 50px;
+  .error {
+    color: $error;
+    text-align: center;
+    margin: 1rem 0;
+  }
 }
 
 .product-overview-header {

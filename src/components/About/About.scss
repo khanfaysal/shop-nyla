@@ -1,42 +1,42 @@
-@import '../../Styles/StyleData';
+@import "../../Styles/StyleData";
 // about heading part style
-.about-heading{
-    background:url('../../images/contact1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.about-heading {
+  background: url("../../images/contact1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-.about-heading h2{
-    display: flex;          
-    justify-content: center; 
-    align-items: center; 
-    height: 250px;
-    width: 100%;
-    color: $white;
-    text-transform: capitalize;
+.about-heading h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 100%;
+  color: $white;
+  text-transform: capitalize;
 }
-.container{
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: $fs-xl; 
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: $fs-xl;
+  margin-bottom: 5rem;
 }
-.txt-part{
-    
+.txt-part {
 }
-.txt-part h3{
-    font-size: $fs-m;
-    font-weight: 700;
-    color: $dark-gray;
-    line-height: $fs-xl;
+.txt-part h3 {
+  font-size: $fs-m;
+  font-weight: 700;
+  color: $dark-gray;
+  line-height: $fs-xl;
 }
-.txt-part p{
-    font-size: $fs-s;
-    font-weight: 400;
-    color: $dark-gray;
+.txt-part p {
+  font-size: $fs-s;
+  font-weight: 400;
+  color: $dark-gray;
 }
-.img-part{
-    margin-top: $fs-xxl;
+.img-part {
+  margin-top: $fs-xxl;
 }
 
 $point: #717fe0;
@@ -51,43 +51,58 @@ $card_round: 10px;
 $card-shadow: -20px -20px 0px 0px $point-light;
 $card-padding-basis: 15px;
 $card_head_padding: 0px 0px $card-padding-basis 0px;
-.card{
-    background: url(../../images/contact.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    // background-color: $card-bgcolor;
-    width: $card_width;
-    min-height: $card_height;
-    display: flex;
-    flex-direction: column;
-    padding: $card_padding;
-    margin: $card_margin;
-    box-shadow: $card-shadow;
-    border-radius: $card_round;
-    animation-name: shadow-show;
-    animation-duration: 1.5s;
-    transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000);
+.card {
+  background: url(../../images/contact.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-color: $card-bgcolor;
+  width: $card_width;
+  min-height: $card_height;
+  display: flex;
+  flex-direction: column;
+  padding: $card_padding;
+  margin: $card_margin;
+  box-shadow: $card-shadow;
+  border-radius: $card_round;
+  animation-name: shadow-show;
+  animation-duration: 1.5s;
+  transition-timing-function: cubic-bezier(
+    0.795,
+    0,
+    0.165,
+    1
+  );
 }
 
 @keyframes line-show {
-  from {margin: 0px 100px;}
-  to {margin: 0px;}
+  from {
+    margin: 0px 100px;
+  }
+  to {
+    margin: 0px;
+  }
 }
 
 @keyframes shadow-show {
-  from {-webkit-box-shadow: 0px 0px 0px 0px #e0e0e0;box-shadow: 0px 0px 0px 0px #e0e0e0;}
-  to {-webkit-box-shadow: $card-shadow;box-shadow: $card-shadow;}
+  from {
+    -webkit-box-shadow: 0px 0px 0px 0px #e0e0e0;
+    box-shadow: 0px 0px 0px 0px #e0e0e0;
+  }
+  to {
+    -webkit-box-shadow: $card-shadow;
+    box-shadow: $card-shadow;
+  }
 }
 
-// media query 
-@media(min-width:700px){
-    .about-section-wrapper{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-gap: $fs-xxl;
-    }
-    .about-section-wrapper> *{
-        // padding: $fs-xl;
-    }
+// media query
+@media (min-width: 700px) {
+  .about-section-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: $fs-xxl;
+  }
+  .about-section-wrapper > * {
+    // padding: $fs-xl;
+  }
 }

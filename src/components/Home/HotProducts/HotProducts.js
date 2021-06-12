@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./HotProducts.scss";
 import data from "./HotProductData";
+import "./HotProducts.scss";
 
 const HotProducts = () => {
   return (
     <div className='hot-products-container'>
       {data.map((data) => (
-        <Card data={data} />
+        <Card data={data} key={data.category} />
       ))}
     </div>
   );

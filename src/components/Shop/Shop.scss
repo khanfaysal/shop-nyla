@@ -9,6 +9,9 @@
   grid-template-columns: repeat(auto-fit, 300px);
   gap: 20px;
   justify-content: center;
+  margin: 0 2rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .category {

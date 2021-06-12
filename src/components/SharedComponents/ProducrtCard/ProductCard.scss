@@ -24,6 +24,9 @@
         color: white;
         transition: all ease-in-out 200ms;
       }
+      #checked {
+        color: rgb(2, 255, 23);
+      }
     }
   }
   .product-image {
@@ -34,4 +37,11 @@
       display: block;
     }
   }
+}
+
+.alertBtn {
+  background-color: $purple;
+}
+.alertBtn:hover {
+  background-color: #1300be !important;
 }
